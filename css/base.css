@@ -1,0 +1,172 @@
+:root {
+  --color-principal: #127213;
+  --color-secundario: #f3f7f5;
+  --color-acento: #3ccf3a;
+  --color-texto: #000000;
+  --color-fondo: #ffffff;   /* fondo por defecto claro */
+}
+
+body {
+  margin: 0;
+  font-family: sans-serif;
+  color: var(--color-texto);
+  background-color: var(--color-fondo);
+  line-height: 1.6;
+}
+
+body.tema-oscuro {
+  --color-texto: #ffffff;
+  --color-fondo: #000000;
+}
+
+
+main {
+  margin: 0 auto;
+  /* antes: padding: 1.5rem 5.5rem 5.5rem;  top, lados, bottom */
+  padding: 1.5rem 5.5rem 5.5rem;
+  padding-left: 15rem;   /* espacio extra a la izquierda */
+  padding-right: 7rem;  /* si quieres también más hueco a la derecha */
+}
+
+
+
+h1, h2, h3 {
+  color: var(--color-principal);
+  margin-top: 0;
+}
+
+a {
+  color: var(--color-principal);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.btn-primario {
+  display: inline-block;
+  background-color: var(--color-principal);
+  color: #ffffff;
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  margin-top: 1rem;
+}
+
+.hero {
+  padding: 0 0.5rem 2.5rem; /* arriba, lados, abajo */
+  text-align: center;
+  background-image: url("../img/banderaExtremadura.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #ffffff;
+}
+
+.hero-image {
+  max-width: 480px;
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin: 1.5rem auto 0;
+  display: block;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.25);
+}
+
+.hero-video {
+  max-width: 560px;
+  margin: 1.5rem auto 0;
+  aspect-ratio: 16 / 9;
+}
+
+.hero-video iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-radius: 8px;
+}
+
+section {
+  margin: 3rem 0;
+}
+
+/* título del hero */
+#h1-turismo {
+  font-family: 'Poppins', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.ciguena-fija {
+  position: fixed;
+  left: 0;
+  bottom: 4rem;
+  z-index: 50;
+}
+
+.ciguena-fija img {
+  max-height: 220px;   /* ajusta tamaño */
+  width: auto;
+}
+
+.ciguena-con-bocadillo {
+  position: relative;
+}
+
+/* bocadillo oculto por defecto */
+.bocadillo-ciguena {
+  position: absolute;
+  left: 73%;              /* a la derecha de la cigüeña */
+  bottom: 5%;             /* algo centrado verticalmente */
+  transform: translateY(0%);
+  max-width: 290px;
+  padding: 0.75rem 1rem;
+  background-color: #ffffff;
+  color: #000000;
+  border-radius: 8px;
+  box-shadow: 0px 7px 12px rgba(9, 95, 2, 0.55);
+  font-size: 1rem;
+  line-height: 1.4;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease;
+}
+
+/* flechita del bocadillo */
+.bocadillo-ciguena::before {
+  content: "";
+  position: absolute;
+  right: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+  border-width: 8px;
+  border-style: solid;
+  border-color: transparent #ffffff transparent transparent;
+}
+
+/* al pasar el ratón por la cigüeña, se muestra el bocadillo */
+.ciguena-con-bocadillo:hover .bocadillo-ciguena {
+  opacity: 1;
+}
+#btn-tema {
+  margin-left: 1rem;
+  padding: 0.3rem 0.7rem;
+  border-radius: 4px;
+  border: 1px solid #ffffff;
+  background: transparent;
+  color: #ffffff;
+  cursor: pointer;
+  font-size: 0.85rem;
+}
+
+a:focus,
+button:focus {
+  outline: 2px solid var(--color-acento);
+  outline-offset: 2px;
+}
+
+
+html {
+  scroll-behavior: smooth;
+}

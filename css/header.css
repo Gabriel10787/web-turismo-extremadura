@@ -1,0 +1,71 @@
+header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background-color: #209345; /* verde Extremadura */
+  color: #ffffff;             /* texto blanco */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0.75rem 1.5rem;
+}
+
+header .logo {
+  display: flex;              /* coloca imagen y texto en fila */
+  align-items: center;        /* centrado vertical */
+  gap: 0.5rem;                /* espacio entre bandera y texto */
+  color: #ffffff;             /* texto blanco (ya lo tenías) */
+}
+
+.logo-bandera {
+  height: 32px;               /* ajusta tamaño según veas */
+  width: auto;
+  border-radius: 2px;         /* opcional, esquinas suaves */
+}
+
+
+header nav a {
+  padding: 0.75rem 0.25rem;
+  font-size: 0.95rem;
+  color: #fbfbfb; /* enlaces en blanco */
+}
+
+header nav a:hover {
+  text-decoration: underline;
+  color:#004f16
+}
+
+
+header .logo {
+  font-weight: 700;
+  color: rgb(1, 2, 4);
+}
+
+header nav ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding: 0;
+  margin: 0;
+}
+
+header nav li {
+  margin: 0;
+}
+
+header nav a {
+  padding: 0.75rem 0.25rem;
+  font-size: 0.95rem;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0.75rem 1.5rem;
+}
